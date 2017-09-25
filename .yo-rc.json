@@ -1,0 +1,10 @@
+{
+  "generator-openapi-repo": {
+    "importExistingSpec": false,
+    "name": "Awesome API",
+    "repo": "congnt24/OpenApi",
+    "splitSpec": false,
+    "samples": true,
+    "installSwaggerUI": true
+  }
+}
