@@ -1,0 +1,112 @@
+{
+  "/campaign/list-campaign": {
+    "get": {
+      "tags": [
+        "Campaign"
+      ],
+      "description": "Get list campaign",
+      "parameters": [
+      ],
+      "responses": {
+        "200": {
+          "description": "Create order and return redirect URL",
+          "schema": {
+            "type": "string",
+            "example": {
+              "status": "success",
+              "message": "success",
+              "data": {
+                "redirect_url": "https://sandbox.123pay.vn/payment/refpayment.123P1709130112751.MICODE.5520000.1505295143994.5a60140c63add4ab27587f074dc38e049957b6dc.VGhhbmggdG9hbiBkb24gcGhvbmcgMzM5MjYgdGFpIFZOVFJJUC5WTg.html",
+                "transaction_id": "VNTRIP1505295143594123PA"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "/campaign/get-campaign/{id}": {
+    "get": {
+      "tags": [
+        "Campaign"
+      ],
+      "description": "Get campaign by id",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "params",
+          "description": "id",
+          "required": true,
+          "type": "integer",
+          "example": 1
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Create order and return redirect URL",
+          "schema": {
+            "type": "string",
+            "example": [
+              {
+                "id": 2,
+                "name": "campaign test",
+                "status": "RUNNING",
+                "content": "Content",
+                "created_at": "2017-10-04T03:11:00.228Z"
+              },
+              {
+                "id": 3,
+                "name": "campaign test",
+                "status": "RUNNING",
+                "content": "Content",
+                "created_at": "2017-10-04T04:16:50.760Z"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/campaign/create-campaign": {
+      "post": {
+        "tags": [
+          "Campaign"
+        ],
+        "description": "create campaign",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "params",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Create order and return redirect URL",
+            "schema": {
+              "type": "string",
+              "example": [
+                {
+                  "id": 2,
+                  "name": "campaign test",
+                  "status": "RUNNING",
+                  "content": "Content",
+                  "created_at": "2017-10-04T03:11:00.228Z"
+                },
+                {
+                  "id": 3,
+                  "name": "campaign test",
+                  "status": "RUNNING",
+                  "content": "Content",
+                  "created_at": "2017-10-04T04:16:50.760Z"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
